@@ -20,4 +20,24 @@ void main(List<String> arguments) {
   const int age = 23;
   // error
   // const int num = num1 + 1;
+
+  // null safety
+  //error
+  // int isNull = null;
+  int? isNull = null; // nullable
+  print(isNull == null); //true
 }
+
+// late variable init
+class Animal {
+  late final String _size;
+  void goBig() {
+    _size = 'big';
+    print(_size);
+  }
+}
+
+// assertion operator
+String? answer;
+// String result = answer; // error
+String result = answer!;
